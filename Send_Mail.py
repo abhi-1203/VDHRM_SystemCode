@@ -11,15 +11,14 @@ import socket
 socket.getaddrinfo('localhost', 8080)
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
-SENDER_ID = "abhijith1203@gmail.com"
-SENDER_PASS = "wccfjvybowmjgbge"
+SENDER_ID = "" #Sender Email ID here
+SENDER_PASS = "" #Sender Password
 
 
 # Function to send mail to our customers once they register!
 
 def Send_Email_On_Register(Udata):
-    RECEIVER_ID = ["abhijith.cs17@bmsce.ac.in"]#"fardeen_saqlain@yahoo.com", "abhijith1203@gmail.com", "jlakshmi478@gmail.com",
-                   #"fahadmohd2797@gmail.com"]
+    RECEIVER_ID = Udata["email"]
 
     for emailID in RECEIVER_ID:
         try:
@@ -83,7 +82,7 @@ def Send_Email_On_Register(Udata):
 
 def Send_Email_On_Test(Udata):
     emailID = Udata['email']
-    RECEIVER_ID = ["abhijith.cs17@bmsce.ac.in"]
+    RECEIVER_ID = Udata["email"]
 
     for emailID in RECEIVER_ID:
         try:
@@ -139,6 +138,3 @@ def Send_Email_On_Test(Udata):
             print(e)
             traceback.print_exc()
 
-
-#Send_Email_On_Register()
-#Send_Email_On_Test()
