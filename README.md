@@ -9,7 +9,7 @@ Project Guide: Selva Kumar S, Assistant Professor, Dept. of CSE, BMSCE.
 
 Repository for System Code: https://github.com/abhi-1203/VDHRM_SystemCode
 
-Repository for App: https://github.com/abhi-1203/VDHRM
+Repository for App: https://github.com/abhi-1203/VDHRM or download the VDHRM-master.zip file
 
 Description:
 
@@ -54,7 +54,7 @@ Steps to Run the code:
 Steps to Install the Android Application:
 
 1. Download Android Studio
-2. Download or clone the Android App from the repository- (https://github.com/abhi-1203/VDHRM)
+2. Download or clone the Android App from the repository- (https://github.com/abhi-1203/VDHRM) or download the VDHRM-master.zip file
 3. Build the App.
 4. After build is complete, Go to the project folder, open ReportTask.java file and replace the “aws-secret-key” with your AWS SECRET KEY, 
     and “aws-access-key with your AWS ACCESS KEY.
