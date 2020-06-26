@@ -9,6 +9,8 @@ Project Guide: Selva Kumar S, Assistant Professor, Dept. of CSE, BMSCE.
 
 Repository for System Code: https://github.com/abhi-1203/VDHRM_SystemCode
 
+Repository for App: https://github.com/abhi-1203/VDHRM
+
 Description:
 
 This project contains implemented code to detect Vein Patterns and heart rate Monitor of the patients. this project helps doctors, radiologists, Hospital Nurses who perform venipuncture on patients to draw blood or to give IV drips. the Code captures the image, processes it, and projects the result back to the patient's skin.
