@@ -22,7 +22,7 @@ def receiver():
     server_sock.bind(("",PORT_ANY))
     server_sock.listen(1)
     ports = server_sock.getsockname()[1]
-    uuid = "6fd729af-5af3-4238-8f29-5480e0b732fe"
+    uuid = "6fd729af-5af3-4238-8f29-5480e0b732fe" #UUID should be same in App too.
     advertise_service( server_sock, "VDHRM",    service_id = uuid,
                    service_classes = [ uuid, SERIAL_PORT_CLASS ],
                    profiles = [ SERIAL_PORT_PROFILE ])
