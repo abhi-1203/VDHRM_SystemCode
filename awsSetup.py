@@ -23,9 +23,9 @@ def upload_file(filename, key):
     #s3 client object
     s3obj = boto3.client('s3')
     #Bucket Name
-    s3bucketName= 's3veinbucket145218-dev'
+    s3bucketName= '' # your S3 bucket Name 
     # Read a file in binary
-    data = open("1231233123123.pdf", 'rb')
+    data = open("tempFile.pdf", 'rb')
     #s3 Folder Name
     foldername = key#Udata['UserId']
     #try uploading a file to the specified foldername and bucket name
@@ -41,12 +41,6 @@ def upload_file(filename, key):
         logging.error(e)
         return False
 
-
-#function to download files from s3 bucket.
-def download_files():
-    #write download code here.
-    
-    return True
     
 #function to list files from s3 bucket.
 def list_files():
@@ -56,7 +50,7 @@ def list_files():
     #s3 Folder Name
     foldername = "jayatest"
     #Bucket Name
-    s3bucketName= 's3veinbucket145218-dev'
+    s3bucketName= '' # your S3 bucket Name 
     
     #try uploading a file to the specified foldername and bucket name
     try:
@@ -71,7 +65,5 @@ def list_files():
     return True
     
 
-#list_files()
-#print(rs)
 
 
