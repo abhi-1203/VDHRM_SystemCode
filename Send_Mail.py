@@ -3,7 +3,7 @@ import traceback
 import email.utils
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from dateutil.relativedelta import relativedelta  # For monthly report~!
+from dateutil.relativedelta import relativedelta
 from string import Template
 import socket
 
@@ -27,7 +27,6 @@ def Send_Email_On_Register(Udata):
             TO = emailID
             html = """<html>
               <head>
-              <!--<img src="https://medias.infia.co/news/images/2019/08/24/2019-08-24-08-57-08-780748.jpg" />-->
               </head>
               <body>
               <p>
