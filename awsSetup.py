@@ -6,20 +6,14 @@ Created on Wed Feb 26 21:23:42 2020
 """
 
 import boto3
-#import os
-#import sys
 import logging
 import pandas as pd
 import matplotlib.pyplot as plt
-#import datetime
 from botocore.exceptions import ClientError
 
 #function to upload files to s3 bucket.
 def upload_file(filename, key):
     
-    #d = datetime.datetime.now()
-    #Extract timestamp, for unique identification to name the files/ objects
-    #timestamp ="{}-{}-{}-{}-{}-{}".format(d.year,d.month,d.day,d.hour,d.minute,d.second)
     #s3 client object
     s3obj = boto3.client('s3')
     #Bucket Name
@@ -48,7 +42,7 @@ def list_files():
     s3obj = boto3.client('s3')
    
     #s3 Folder Name
-    foldername = "jayatest"
+    foldername = "" #FOLDER NAME HERE
     #Bucket Name
     s3bucketName= '' # your S3 bucket Name 
     
