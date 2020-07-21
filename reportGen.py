@@ -107,17 +107,7 @@ def convertHtmlToPdf(Udata):
                                        problem=Udata['problem'],
                                        description=Udata['description'],
                                        downloadLink=Udata['DownloadLink'])
-                                       #img='E:\final_project_docs\Implementation\test.png')
-    #s=Template(sourceHtml).safe_substitute(name='Abhijith Purohit',
-     #                                  age='23',
-    #                                   DocName='Abhijith asdasdasasds',
-      #                                 HospName='dadasdasddaddsas dddasdasdadasdadsdasdadasd',
-     #                                  TestType='both Heart Rate Test and Vein Detection',
-     #                                  email='abhijith1203@gmail.com',
-      #                                 phone='9739460521',
-      #                                 date='06-04-2020',
-      #                                 ReportNo='132456')
-      #                                 #img='E:\final_project_docs\Implementation\test.png')
+                                       
     outputFilename = "1231233123123.pdf"
     # open output file for writing (truncated binary)
     resultFile = open(outputFilename, "w+b")
