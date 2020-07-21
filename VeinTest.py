@@ -5,7 +5,6 @@ def veinDetect():
     print("Capturing image wait..")
     i=cv2.VideoCapture(0)
     check,frame = i.read()
-    #frame = cv2.imread("new12.jpg",1)
     og_image = frame[:]
     height, width = frame.shape[0:2]
     startRow = int(height*.45)
