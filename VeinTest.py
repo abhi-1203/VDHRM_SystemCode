@@ -25,24 +25,10 @@ def veinDetect():
     img = np.zeros(frame.shape,dtype=np.uint8)
     img.fill(0) # or img[:] = 255
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
-    #kernel_size = 15
-    #blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size),0)
-    #cv2.imwrite('Framegray.jpg', gray)
-    #gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     my_clahe = cv2.createCLAHE(clipLimit=30, tileGridSize=(8,8))
-
     cl_img=my_clahe.apply(gray)
-
-    #cv2.imwrite('clgray.jpg', cl_img)
-
-    #img_blur= cv2.GaussianBlur(cl_img,(kernel_size, kernel_size),9)
-    #cv2.imwrite("Final.jpg",img_blur)
-    #ks=np.array([[-1,-1,-1],[-1,9,-1],[-1,-1,-1]])
-    #sh=cv2.filter2D(cl_img,-1,ks)
-    #cv2.imwrite('shimg.png',sh )
+    
     gray_filtered = cv2.bilateralFilter(cl_img,150, 10,10)
-    #cv2.imwrite('clgray_fil.png',gray_filtered )
     ret3,th31 = cv2.threshold(cl_img,0,255,cv2.THRESH_TRUNC+cv2.THRESH_OTSU)
     cv2.imwrite('thresh.jpg',th31 )
     lap=cv2.Laplacian(th31,cv2.CV_64F,ksize=3)
@@ -52,7 +38,6 @@ def veinDetect():
     for c in contours:
         rect = cv2.boundingRect(c)
         x,y,w,h = rect
-        #cv2.rectangle(og_image,(x,y),(x+w,y+h),(0,255,0),1)
         cv2.drawContours(th31, c, -1, (255,255,255), 1)
     
     cv2.imshow('Final.jpg', th31)
